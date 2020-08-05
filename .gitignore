@@ -25,3 +25,7 @@ Desktop.ini
 /schoology-oauth/target/
 
 *.class
+.project
+*/.settings
+*/.project
+*/.classpath
