@@ -25,11 +25,6 @@ public class SchoologyFlow
 	@Getter
 	private final OAuthService service;
 	
-	public SchoologyFlow(String domain, String key, String secret, String callbackUrl)
-	{
-		this(new SchoologyResourceLocator(domain), key, secret, callbackUrl);
-	}
-	
 	public SchoologyFlow(SchoologyResourceLocator locator, String key, String secret, String callbackUrl)
 	{
 		this(locator, createService(locator, key, secret, callbackUrl));
