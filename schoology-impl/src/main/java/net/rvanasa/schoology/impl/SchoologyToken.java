@@ -29,13 +29,4 @@ public class SchoologyToken
 	{
 		return getService().getAuthorizationUrl(getToken());
 	}
-	
-	public ISchoologyRequestHandler createRequestHandler(String verifier)
-	{
-		Token accessToken = getService().getAccessToken(getToken(), new Verifier(verifier));
-		
-		SchoologyRequestHandler handler = new SchoologyRequestHandler(getFlow().getResourceLocator(), getService());
-		handler.setAccessToken(accessToken);
-		return handler;
-	}
 }
