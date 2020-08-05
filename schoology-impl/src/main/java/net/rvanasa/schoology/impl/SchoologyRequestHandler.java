@@ -6,20 +6,11 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
-
-import org.scribe.builder.ServiceBuilder;
 import org.scribe.model.OAuthRequest;
 import org.scribe.model.Response;
-import org.scribe.model.SignatureType;
-import org.scribe.model.Token;
 import org.scribe.model.Verb;
-import org.scribe.oauth.OAuthService;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import lombok.Getter;
-import lombok.Setter;
 import net.rvanasa.schoology.ISchoologyRequestHandler;
 import net.rvanasa.schoology.adapters.BooleanAdapter;
 import net.rvanasa.schoology.adapters.UnixTimestampAdapter;
@@ -50,16 +41,12 @@ import net.rvanasa.schoology.obj.users.SchoologyUser;
 import net.rvanasa.schoology.obj.users.SchoologyUsersPage;
 
 public class SchoologyRequestHandler implements ISchoologyRequestHandler {
-  @Getter
   private final SchoologyResourceLocator resourceLocator;
 
-  @Getter
   public Gson gson;
 
-  @Getter
   private SchoologyContentTypeEnum contentType = SchoologyContentTypeEnum.JSON;
 
-  @Getter
   private String accessToken;
 
   /**
@@ -75,7 +62,27 @@ public class SchoologyRequestHandler implements ISchoologyRequestHandler {
     this.gson = new GsonBuilder().registerTypeAdapter(boolean.class, new BooleanAdapter())
         .registerTypeAdapter(Date.class, new UnixTimestampAdapter()).create();
   }
+  
+  public SchoologyResourceLocator getResourceLocator()
+  {
+    return resourceLocator;
+  }
 
+  public Gson getGson()
+  {
+    return gson;
+  }
+
+  public SchoologyContentTypeEnum getContentType()
+  {
+    return contentType;
+  }
+
+  public String getAccessToken() 
+  {
+    return accessToken;
+  }
+  
   public OAuthRequest prepareRequest(Verb verb, String resource) {
     String URL = resource;
     String query = null;

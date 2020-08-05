@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.assignments;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /**
  * Represents the JSON for an Assignment in the Schoology API as a Java object.
  * See:
@@ -13,7 +11,6 @@ import lombok.Getter;
  * @author jkstpierre
  *
  */
-@Getter
 public class SchoologyAssignment {
   @SerializedName(value = "id")
   String ID;
@@ -74,4 +71,95 @@ public class SchoologyAssignment {
   
   @SerializedName(value = "grading_group_ids")
   Integer[] gradingGroupIds;
+  
+  
+  
+  public String getID()
+  {
+    return ID;
+  }
+  public String getTitle()
+  {
+    return title;
+  }
+  public String getDescription()
+  {
+    return description;
+  }
+  public String getDueDate()
+  {
+    return dueDate;
+  }
+  public Integer getGradingScale()
+  {
+    return gradingScale;
+  }
+  public Integer getGradingPeriod()
+  {
+    return gradingPeriod;
+  }
+  public Integer getGradingCategory()
+  {
+    return gradingCategory;
+  }
+  public Float getMaxPoints()
+  {
+    return maxPoints;
+  }
+  public Float getFactor()
+  {
+    return factor;
+  }
+  public Boolean getIsFinal()
+  {
+    return isFinal;
+  }
+  public Boolean getShowComments()
+  {
+    return showComments;
+  }
+  public Boolean getGradeStats()
+  {
+    return gradeStats;
+  }
+  public Boolean getAllowDropbox()
+  {
+    return allowDropbox;
+  }
+  public Boolean getAllowDiscussion()
+  {
+    return allowDiscussion;
+  }
+  public Boolean getPublished()
+  {
+    return published;
+  }
+  public String getType()
+  {
+    return type;
+  }
+  public Integer getGradeItemId()
+  {
+    return gradeItemId;
+  }
+  public Integer getDropboxSubmissions()
+  {
+    return dropboxSubmissions;
+  }
+  public Integer getDropboxLastSubmission()
+  {
+    return dropboxLastSubmission;
+  }
+  public Boolean getShowRubric()
+  {
+    return showRubric;
+  }
+  public Integer[] getAssignees()
+  {
+    return assignees;
+  }
+  public Integer[] getGradingGroupIds()
+  {
+    return gradingGroupIds;
+  }
 }

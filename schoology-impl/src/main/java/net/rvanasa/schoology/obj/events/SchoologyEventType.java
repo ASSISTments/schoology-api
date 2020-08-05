@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.events;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/event
  */
@@ -17,15 +15,22 @@ public enum SchoologyEventType
 	@SerializedName(value="discussion")
 	DISCUSSION("discussion", "Due event for a discussion");
 	
-	@Getter
 	private final String apiVaule;
-	@Getter
 	private final String description;
 	
 	private SchoologyEventType(String apiValue, String description)
 	{
 		this.apiVaule = apiValue;
 		this.description = description;
+	}
+	
+	public String getApiVaule()
+	{
+	  return apiVaule;
+	}
+	public String getDescription()
+	{
+	  return description;
 	}
 	
 	public static SchoologyEventType getEventType(String apiValue)

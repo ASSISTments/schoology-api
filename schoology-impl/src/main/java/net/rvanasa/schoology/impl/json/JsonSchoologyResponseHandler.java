@@ -2,7 +2,6 @@ package net.rvanasa.schoology.impl.json;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-
 import net.rvanasa.schoology.ISchoologyNodeParser;
 import net.rvanasa.schoology.ISchoologyResponseHandler;
 import net.rvanasa.schoology.impl.SchoologyResponse;

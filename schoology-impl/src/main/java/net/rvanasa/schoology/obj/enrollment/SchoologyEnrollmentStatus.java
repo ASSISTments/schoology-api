@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.enrollment;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/enrollment
  */
@@ -21,15 +19,22 @@ public enum SchoologyEnrollmentStatus
 	@SerializedName(value="5")
 	ARCHIVED(5, "Archived");
 	
-	@Getter
 	private final int apiValue;
-	@Getter
 	private final String description;
 	
 	private SchoologyEnrollmentStatus(int apiValue, String description)
 	{
 		this.apiValue = apiValue;
 		this.description = description;
+	}
+	
+	public int getApiValue()
+	{
+	  return apiValue;
+	}
+	public String getDescription()
+	{
+	  return description;
 	}
 	
 	public static SchoologyEnrollmentStatus getEnrollmentStatus(int apiValue)

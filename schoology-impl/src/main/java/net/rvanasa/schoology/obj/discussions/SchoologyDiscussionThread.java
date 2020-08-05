@@ -1,17 +1,13 @@
 package net.rvanasa.schoology.obj.discussions;
 
 import java.util.Date;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/discussion-thread
  */
-@Getter
 public class SchoologyDiscussionThread extends SchoologyReference<SchoologyDiscussionThread>
 {
 	
@@ -44,5 +40,92 @@ public class SchoologyDiscussionThread extends SchoologyReference<SchoologyDiscu
 	boolean completionStatus;
 	
 	SchoologyLinks links;
+	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getUserID()
+	{
+	  return userID;
+	}
+
+	public String getTitle()
+	{
+	  return title;
+	}
+
+	public String getBody()
+	{
+	  return body;
+	}
+
+	public boolean getGraded()
+	{
+	  return graded;
+	}
+
+	public Date getDue()
+	{
+	  return due;
+	}
+
+	public int getGradeItemID()
+	{
+	  return gradeItemID;
+	}
+
+	public int getGradingScale()
+	{
+	  return gradingScale;
+	}
+
+	public int getGradingPeriod()
+	{
+	  return gradingPeriod;
+	}
+
+	public int getGradingCateogry()
+	{
+	  return gradingCateogry;
+	}
+
+	public float getMaxPoints()
+	{
+	  return maxPoints;
+	}
+
+	public float getFactor()
+	{
+	  return factor;
+	}
+
+	public boolean getIsFinal()
+	{
+	  return isFinal;
+	}
+
+	public boolean getPublished()
+	{
+	  return published;
+	}
+
+	public boolean getRequireInitialPost()
+	{
+	  return requireInitialPost;
+	}
+
+	    //No documentation available
+	public boolean getCompletionStatus()
+	{
+	  return completionStatus;
+	}
+
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
 	
 }

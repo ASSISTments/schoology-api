@@ -1,15 +1,11 @@
 package net.rvanasa.schoology.impl;
 
-import lombok.Getter;
 import net.rvanasa.schoology.exception.SchoologyException;
 
 public class SchoologyResponse
 {
-	@Getter
 	private final SchoologyResponseStatusEnum status;
-	@Getter
 	private final SchoologyResponseBody body;
-	@Getter
 	private final SchoologyResponseHeaders headers;
 	
 	public SchoologyResponse(SchoologyResponseStatusEnum status, SchoologyResponseBody body, SchoologyResponseHeaders headers)
@@ -17,6 +13,19 @@ public class SchoologyResponse
 		this.status = status;
 		this.body = body;
 		this.headers = headers;
+	}
+	
+	public SchoologyResponseStatusEnum getStatus()
+	{
+	  return status;
+	}
+	public SchoologyResponseBody getBody()
+	{
+	  return body;
+	}
+	public SchoologyResponseHeaders getHeaders()
+	{
+	  return headers;
 	}
 	
 	public SchoologyResponse requireSuccess()

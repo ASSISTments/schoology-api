@@ -1,12 +1,8 @@
 package net.rvanasa.schoology.obj.updates;
 
 import java.util.Date;
-
 import org.json.JSONObject;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.impl.SchoologyRealm;
 import net.rvanasa.schoology.impl.SchoologyResponse;
 import net.rvanasa.schoology.obj.SchoologyLinks;
@@ -17,7 +13,6 @@ import net.rvanasa.schoology.obj.updates.comments.SchoologyUpdateComment;
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/updates
  */
-@Getter
 public class SchoologyUpdate extends SchoologyReference<SchoologyUpdate>
 {
 	
@@ -55,6 +50,72 @@ public class SchoologyUpdate extends SchoologyReference<SchoologyUpdate>
 	SchoologyPoll polls;
 	
 	SchoologyLinks links;
+	
+	
+	public String getID()
+	{
+	  return ID;
+	}
+	public String getBody()
+	{
+	  return body;
+	}
+	public String getUserID()
+	{
+	  return userID;
+	}
+	public Date getCreated()
+	{
+	  return created;
+	}
+	public Date getLastUpdated()
+	{
+	  return lastUpdated;
+	}
+	public SchoologyRealm getRealm()
+	{
+	  return realm;
+	}
+	public int getLikes()
+	{
+	  return likes;
+	}
+	public boolean getUserLikeAction()
+	{
+	  return userLikeAction;
+	}
+	public String getUID()
+	{
+	  return uID;
+	}
+	public String getSectionID()
+	{
+	  return sectionID;
+	}
+	public String getBuildingID()
+	{
+	  return buildingID;
+	}
+	public String getGroupID()
+	{
+	  return groupID;
+	}
+	public int getNumComments()
+	{
+	  return numComments;
+	}
+	public SchoologyAttachments getAttachments()
+	{
+	  return attachments;
+	}
+	public SchoologyPoll getPolls()
+	{
+	  return polls;
+	}
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
 	
 	/**
 	 * Depending on the realm, a different ID field is used
@@ -100,18 +161,21 @@ public class SchoologyUpdate extends SchoologyReference<SchoologyUpdate>
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/poll
  */
-@Getter
 class SchoologyPoll
 {
 	
 	SchoologyPollOptions[] poll;
+	
+	public SchoologyPollOptions[] getPoll()
+	{
+	  return poll;
+	}
 	
 }
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/poll
  */
-@Getter
 class SchoologyPollOptions
 {
 	
@@ -119,5 +183,22 @@ class SchoologyPollOptions
 	String title;
 	int count;
 	boolean selected;
+	
+	public String getId()
+	{
+	  return id;
+	}
+	public String getTitle()
+	{
+	  return title;
+	}
+	public int getCount()
+	{
+	  return count;
+	}
+	public boolean getSelected()
+	{
+	  return selected;
+	}
 	
 }

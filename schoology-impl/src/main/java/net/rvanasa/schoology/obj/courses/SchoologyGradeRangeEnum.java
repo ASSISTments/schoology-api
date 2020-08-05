@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.courses;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/course#Grade-Range
  */
@@ -43,15 +41,22 @@ public enum SchoologyGradeRangeEnum
 	@SerializedName(value="15")
 	HIGHER_ED(15, "Higher-Ed");
 	
-	@Getter
 	private final int apiVaule;
-	@Getter
 	private final String gradeLevel;
 	
 	private SchoologyGradeRangeEnum(int apiValue, String subjectArea)
 	{
 		this.apiVaule = apiValue;
 		this.gradeLevel = subjectArea;
+	}
+	
+	public int getApiVaule()
+	{
+	  return apiVaule;
+	}
+	public String getGradeLevel()
+	{
+	  return gradeLevel;
 	}
 	
 	public static SchoologyGradeRangeEnum getGradeLevel(int apiValue)

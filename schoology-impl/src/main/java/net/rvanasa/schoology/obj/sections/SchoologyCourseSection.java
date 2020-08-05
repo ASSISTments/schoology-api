@@ -1,15 +1,12 @@
 package net.rvanasa.schoology.obj.sections;
 
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/course-section
  */
-@Getter
 public class SchoologyCourseSection extends SchoologyReference<SchoologyCourseSection>
 {
 	
@@ -61,9 +58,118 @@ public class SchoologyCourseSection extends SchoologyReference<SchoologyCourseSe
 	
 	SchoologyLinks links;
 	
+	public String getID()
+	{
+	  return ID;
+	}
+	public String getCourseTitle()
+	{
+	  return courseTitle;
+	}
+	public String getCourseCode()
+	{
+	  return courseCode;
+	}
+	public String getCourseID()
+	{
+	  return courseID;
+	}
+	public String getSchoolID()
+	{
+	  return schoolID;
+	}
+	public String getBuildingID()
+	{
+	  return buildingID;
+	}
+	public String getAccessCode()
+	{
+	  return accessCode;
+	}
+	public String getSectionTitle()
+	{
+	  return sectionTitle;
+	}
+	public String getSectionCode()
+	{
+	  return sectionCode;
+	}
+	public String getSectionSchoolCode()
+	{
+	  return sectionSchoolCode;
+	}
+	public String getSynced()
+	{
+	  return synced;
+	}
+	public boolean getActive()
+	{
+	  return active;
+	}
+	public String getDescription()
+	{
+	  return description;
+	}
+	public String getSubjectArea()
+	{
+	  return subjectArea;
+	}
+	public int getGradeLevelRangeStart()
+	{
+	  return gradeLevelRangeStart;
+	}
+	public int getGradeLevelRangeEnd()
+	{
+	  return gradeLevelRangeEnd;
+	}
+	public String getParentID()
+	{
+	  return parentID;
+	}
+	public int[] getGradingPeriods()
+	{
+	  return gradingPeriods;
+	}
+	public String getProfileURL()
+	{
+	  return profileURL;
+	}
+	public String getLocation()
+	{
+	  return location;
+	}
+	public String[] getMeetingDays()
+	{
+	  return meetingDays;
+	}
+	public String getStartTime()
+	{
+	  return startTime;
+	}
+	public String getEndTime()
+	{
+	  return endTime;
+	}
+	public String getWeight()
+	{
+	  return weight;
+	}
+	public SchoologyCourseSectionOptions getOptions()
+	{
+	  return options;
+	}
+	public boolean getAdmin()
+	{
+	  return admin;
+	}
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
+	
 }
 
-@Getter
 class SchoologyCourseSectionOptions
 {
 	
@@ -90,7 +196,62 @@ class SchoologyCourseSectionOptions
 	@SerializedName(value="allow_custom_overall_grade_text")
 	boolean allowCustomOverallGradeText;
 	
-	@Getter
+	public String getWeightedGradingCategories()
+	{
+	  return weightedGradingCategories;
+	}
+
+	public String getUploadDocuments()
+	{
+	  return uploadDocuments;
+	}
+
+	public String getCreateDiscussion()
+	{
+	  return createDiscussion;
+	}
+
+	public String getMemberPost()
+	{
+	  return memberPost;
+	}
+
+	public String getMemberPostComment()
+	{
+	  return memberPostComment;
+	}
+
+	public boolean getDefaultGradingScaleID()
+	{
+	  return defaultGradingScaleID;
+	}
+
+	public SchoologyContentIndexVisibility getContentIndexVisibility()
+	{
+	  return contentIndexVisibility;
+	}
+
+	public boolean getHideOverallGrade()
+	{
+	  return hideOverallGrade;
+	}
+
+	public boolean getHideGradingPeriodGrade()
+	{
+	  return hideGradingPeriodGrade;
+	}
+
+	public boolean getAllowCustomOverallGrade()
+	{
+	  return allowCustomOverallGrade;
+	}
+
+	public boolean getAllowCustomOverallGradeText()
+	{
+	  return allowCustomOverallGradeText;
+	}
+
+	
 	class SchoologyContentIndexVisibility{
 		
 		boolean topics;
@@ -104,6 +265,52 @@ class SchoologyCourseSectionOptions
 		boolean discussion;
 		boolean album;
 		boolean pages;
+		
+		public boolean getTopics()
+		{
+		  return topics;
+		}
+
+		public boolean getAssignments()
+		{
+		  return assignments;
+		}
+
+		public boolean getAssessments()
+		{
+		  return assessments;
+		}
+
+		public boolean getCourseAssessment()
+		{
+		  return courseAssessment;
+		}
+
+		public boolean getCommonAssessments()
+		{
+		  return commonAssessments;
+		}
+
+		public boolean getDocuments()
+		{
+		  return documents;
+		}
+
+		public boolean getDiscussion()
+		{
+		  return discussion;
+		}
+
+		public boolean getAlbum()
+		{
+		  return album;
+		}
+
+		public boolean getPages()
+		{
+		  return pages;
+		}
+
 		
 	}
 	

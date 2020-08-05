@@ -1,17 +1,13 @@
 package net.rvanasa.schoology.obj.albums;
 
 import java.util.Date;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/media-album
  */
-@Getter
 public class SchoologyMediaAlbum extends SchoologyReference<SchoologyMediaAlbum>
 {
 	
@@ -40,5 +36,81 @@ public class SchoologyMediaAlbum extends SchoologyReference<SchoologyMediaAlbum>
 	String completionStatus;
 	
 	SchoologyLinks links;
+	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getTitle()
+	{
+	  return title;
+	}
+
+	public String getDescription()
+	{
+	  return description;
+	}
+
+	public boolean getSettingComments()
+	{
+	  return settingComments;
+	}
+
+	public boolean getSettingMemberPost()
+	{
+	  return settingMemberPost;
+	}
+
+	public boolean getPublished()
+	{
+	  return published;
+	}
+
+	public int getPhotoCount()
+	{
+	  return photoCount;
+	}
+
+	public int getVideoCount()
+	{
+	  return videoCount;
+	}
+
+	public int getAudioCount()
+	{
+	  return audioCount;
+	}
+
+	public String getCoverImageURL()
+	{
+	  return coverImageURL;
+	}
+
+	public Date getCreated()
+	{
+	  return created;
+	}
+
+	public boolean getAvailable()
+	{
+	  return available;
+	}
+
+	public boolean getCompleted()
+	{
+	  return completed;
+	}
+
+	public String getCompletionStatus()
+	{
+	  return completionStatus;
+	}
+
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
 	
 }

@@ -1,24 +1,19 @@
 package net.rvanasa.schoology.obj.users;
 
 import org.json.JSONObject;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.impl.SchoologyRealm;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/user
  */
-@Getter
 public class SchoologyUser extends SchoologyReference<SchoologyUser>
 {
   /*
    * https://developers.schoology.com/api-documentation/rest-api-v1/user
    * Must request extended user info to receive
    */
-  @Getter
   public static class SchoologyProfileInfo
   {
     
@@ -40,12 +35,72 @@ public class SchoologyUser extends SchoologyReference<SchoologyUser>
     @SerializedName(value="birthday_date")
     String birthdayDate;
     String birthday;
+    
+    public String getSubjectsTaught()
+    {
+      return subjectsTaught;
+    }
+
+    public String getGradesTaught()
+    {
+      return gradesTaught;
+    }
+
+    public String getPosition()
+    {
+      return position;
+    }
+
+    public String getDepartment()
+    {
+      return department;
+    }
+
+    public String getBio()
+    {
+      return bio;
+    }
+
+    public String getPhone()
+    {
+      return phone;
+    }
+
+    public String getWebsite()
+    {
+      return website;
+    }
+
+    public String getAddress()
+    {
+      return address;
+    }
+
+    public String getInterests()
+    {
+      return interests;
+    }
+
+    public String getActivities()
+    {
+      return activities;
+    }
+
+    public String getBirthdayDate()
+    {
+      return birthdayDate;
+    }
+
+    public String getBirthday()
+    {
+      return birthday;
+    }
+
   }
   
   /*
    * No documentation available
    */
-  @Getter
   public static class SchoologyPermissions
   {
 
@@ -53,6 +108,17 @@ public class SchoologyUser extends SchoologyReference<SchoologyUser>
     boolean isDirectoryPublic;
     @SerializedName(value="allow_connections")
     boolean allowConnection;
+    
+    public boolean getIsDirectoryPublic()
+    {
+      return isDirectoryPublic;
+    }
+
+    public boolean getAllowConnection()
+    {
+      return allowConnection;
+    }
+
   }
 
 	//Same as uid
@@ -131,6 +197,187 @@ public class SchoologyUser extends SchoologyReference<SchoologyUser>
 	//Missing from schoology documentation
 	boolean admin;
 	boolean status;
+	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getUserID()
+	{
+	  return userID;
+	}
+
+	public String getSchoolID()
+	{
+	  return schoolID;
+	}
+
+	public String getBuildingID()
+	{
+	  return buildingID;
+	}
+
+	public String getSchoolUID()
+	{
+	  return schoolUID;
+	}
+
+	public String getNameTitle()
+	{
+	  return nameTitle;
+	}
+
+	public boolean getNameTitleShow()
+	{
+	  return nameTitleShow;
+	}
+
+	public String getNameFirst()
+	{
+	  return nameFirst;
+	}
+
+	public String getNameFirstPreferred()
+	{
+	  return nameFirstPreferred;
+	}
+
+	public String getNameMiddle()
+	{
+	  return nameMiddle;
+	}
+
+	public String getNameMiddleShow()
+	{
+	  return nameMiddleShow;
+	}
+
+	public String getNameLast()
+	{
+	  return nameLast;
+	}
+
+	public String getNameDisplay()
+	{
+	  return nameDisplay;
+	}
+
+	public String getUsername()
+	{
+	  return username;
+	}
+
+	public String getPrimaryEmail()
+	{
+	  return primaryEmail;
+	}
+
+	public String getPosition()
+	{
+	  return position;
+	}
+
+	public SchoologyGenderEnum getGender()
+	{
+	  return gender;
+	}
+
+	public int getGradYear()
+	{
+	  return gradYear;
+	}
+
+	public String getBirthdayDate()
+	{
+	  return birthdayDate;
+	}
+
+	public String getPassword()
+	{
+	  return password;
+	}
+
+	public int getRoleID()
+	{
+	  return roleID;
+	}
+
+	public boolean getEmailLoginInfo()
+	{
+	  return emailLoginInfo;
+	}
+
+	public String getPictureURL()
+	{
+	  return pictureURL;
+	}
+
+	public String getTzName()
+	{
+	  return tzName;
+	}
+
+	public SchoologyUser[] getParents()
+	{
+	  return parents;
+	}
+
+	public String getParentUIDs()
+	{
+	  return parentUIDs;
+	}
+
+	public String getAdvisorUIDs()
+	{
+	  return advisorUIDs;
+	}
+
+	public String getChildURLs()
+	{
+	  return childURLs;
+	}
+
+	public int getSendMessage()
+	{
+	  return sendMessage;
+	}
+
+	public boolean getSynced()
+	{
+	  return synced;
+	}
+
+	public int getProfilePictureFID()
+	{
+	  return profilePictureFID;
+	}
+
+	public String getAdditionalBuildings()
+	{
+	  return additionalBuildings;
+	}
+
+	public SchoologyProfileInfo getProfileInfo()
+	{
+	  return profileInfo;
+	}
+
+	public boolean getUsePreferredFirstName()
+	{
+	  return usePreferredFirstName;
+	}
+
+	public boolean getAdmin()
+	{
+	  return admin;
+	}
+
+	public boolean getStatus()
+	{
+	  return status;
+	}
+
 	
 	public boolean setNameFirstPreferred(String nameFirstPreferred)
 	{

@@ -1,17 +1,13 @@
 package net.rvanasa.schoology.obj.updates.comments;
 
 import java.util.Date;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/update-comment
  */
-@Getter
 public class SchoologyUpdateComment extends SchoologyReference<SchoologyUpdateComment>
 {
 	
@@ -30,4 +26,49 @@ public class SchoologyUpdateComment extends SchoologyReference<SchoologyUpdateCo
 	
 	SchoologyLinks links;
 	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getUserID()
+	{
+	  return userID;
+	}
+
+	public String getComment()
+	{
+	  return comment;
+	}
+
+	public Date getCreated()
+	{
+	  return created;
+	}
+
+	public String getParentID()
+	{
+	  return parentID;
+	}
+
+	public boolean getStatus()
+	{
+	  return status;
+	}
+
+	public int getLikes()
+	{
+	  return likes;
+	}
+
+	public boolean getUserLikeAction()
+	{
+	  return userLikeAction;
+	}
+
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
 }

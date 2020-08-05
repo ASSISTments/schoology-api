@@ -1,10 +1,7 @@
 package net.rvanasa.schoology.obj.albums;
 
 import java.util.Date;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
@@ -12,7 +9,6 @@ import net.rvanasa.schoology.obj.SchoologyReference;
  * https://developers.schoology.com/api-documentation/rest-api-v1/media-album#list
  * withcontent=1
  */
-@Getter
 public class SchoologyMediaAlbumContent extends SchoologyReference<SchoologyMediaAlbumContent>
 {
 	
@@ -45,5 +41,86 @@ public class SchoologyMediaAlbumContent extends SchoologyReference<SchoologyMedi
 	String thumbnailDimensions;
 	@SerializedName(value="content_dimensions")
 	String contentDimensions;
+	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getAlbumID()
+	{
+	  return albumID;
+	}
+
+	public String getType()
+	{
+	  return type;
+	}
+
+	public String getCaption()
+	{
+	  return caption;
+	}
+
+	public int getDisplayOrder()
+	{
+	  return displayOrder;
+	}
+
+	public Date getCreated()
+	{
+	  return created;
+	}
+
+	public boolean getAlbumCover()
+	{
+	  return albumCover;
+	}
+
+	public String getConvertedURL()
+	{
+	  return convertedURL;
+	}
+
+	public String getConvertedFilesize()
+	{
+	  return convertedFilesize;
+	}
+
+	public String getConvertedMD5Checksum()
+	{
+	  return convertedMD5Checksum;
+	}
+
+	public String getContentURL()
+	{
+	  return contentURL;
+	}
+
+	public String getContentFilesize()
+	{
+	  return contentFilesize;
+	}
+
+	public String getContentMD5Checksum()
+	{
+	  return contentMD5Checksum;
+	}
+
+	public String getThumbnailURL()
+	{
+	  return thumbnailURL;
+	}
+
+	public String getThumbnailDimensions()
+	{
+	  return thumbnailDimensions;
+	}
+
+	public String getContentDimensions()
+	{
+	  return contentDimensions;
+	}
+
 	
 }

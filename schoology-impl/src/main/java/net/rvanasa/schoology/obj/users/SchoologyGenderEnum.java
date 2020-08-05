@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.users;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/user
  */
@@ -15,9 +13,7 @@ public enum SchoologyGenderEnum
 	@SerializedName(value="F")
 	FEMALE("F", "Female");
 	
-	@Getter
 	private final String apiVaule;
-	@Getter
 	private final String gender;
 	
 	private SchoologyGenderEnum(String apiValue, String subjectArea)
@@ -25,6 +21,17 @@ public enum SchoologyGenderEnum
 		this.apiVaule = apiValue;
 		this.gender = subjectArea;
 	}
+	
+	public String getApiVaule()
+	{
+	  return apiVaule;
+	}
+
+	public String getGender()
+	{
+	  return gender;
+	}
+
 	
 	public static SchoologyGenderEnum getGender(String apiValue)
 	{

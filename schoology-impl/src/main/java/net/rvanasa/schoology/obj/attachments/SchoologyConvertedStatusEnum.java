@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.attachments;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api/retrieving-attachments#File_Object
  */
@@ -19,15 +17,22 @@ public enum SchoologyConvertedStatusEnum
 	@SerializedName(value="4")
 	INACTIVE(4, "Any sort of conversion attempts are inactive");
 	
-	@Getter
 	private final int apiVaule;
-	@Getter
 	private final String meaning;
 	
 	private SchoologyConvertedStatusEnum(int apiValue, String meaning)
 	{
 		this.apiVaule = apiValue;
 		this.meaning = meaning;
+	}
+	
+	public int getApiVaule()
+	{
+	  return apiVaule;
+	}
+	public String getMeaning()
+	{
+	  return meaning;
 	}
 	
 	public static SchoologyConvertedStatusEnum getConvertedStatus(int apiValue)

@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.events;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/event
  */
@@ -17,15 +15,22 @@ public enum SchoologyRSVPType
 	@SerializedName(value="2")
 	EVERYONE(2, "Anyone can RSVP");
 	
-	@Getter
 	private final int apiVaule;
-	@Getter
 	private final String description;
 	
 	private SchoologyRSVPType(int apiValue, String description)
 	{
 		this.apiVaule = apiValue;
 		this.description = description;
+	}
+	
+	public int getApiVaule()
+	{
+	  return apiVaule;
+	}
+	public String getDescription()
+	{
+	  return description;
 	}
 	
 	public static SchoologyRSVPType getRSVPType(int apiValue)

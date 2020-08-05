@@ -1,15 +1,12 @@
 package net.rvanasa.schoology.obj.courses;
 
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/course
  */
-@Getter
 public class SchoologyCourse extends SchoologyReference<SchoologyCourse>
 {
 	
@@ -32,5 +29,55 @@ public class SchoologyCourse extends SchoologyReference<SchoologyCourse>
 	SchoologyCourseSubjectAreaEnum subjectArea;
 	
 	SchoologyLinks links;
+	
+	public String getID()
+	{
+	  return ID;
+	}
+	public String getBuildingID()
+	{
+	  return buildingID;
+	}
+	public String getTitle()
+	{
+	  return title;
+	}
+	public String getCourseCode()
+	{
+	  return courseCode;
+	}
+	public String getDepartment()
+	{
+	  return department;
+	}
+	public String getDescription()
+	{
+	  return description;
+	}
+	public double getCredits()
+	{
+	  return credits;
+	}
+	public boolean getSynced()
+	{
+	  return synced;
+	}
+	public SchoologyGradeRangeEnum getGradeLevelRangeStart()
+	{
+	  return gradeLevelRangeStart;
+	}
+	public SchoologyGradeRangeEnum getGradeLevelRangeEnd()
+	{
+	  return gradeLevelRangeEnd;
+	}
+	public SchoologyCourseSubjectAreaEnum getSubjectArea()
+	{
+	  return subjectArea;
+	}
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
 	
 }

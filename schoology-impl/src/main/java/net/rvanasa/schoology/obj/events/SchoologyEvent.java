@@ -1,10 +1,7 @@
 package net.rvanasa.schoology.obj.events;
 
 import java.util.Date;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.impl.SchoologyRealm;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
@@ -12,7 +9,6 @@ import net.rvanasa.schoology.obj.SchoologyReference;
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/event
  */
-@Getter
 public class SchoologyEvent extends SchoologyReference<SchoologyEvent>
 {
 	
@@ -42,4 +38,85 @@ public class SchoologyEvent extends SchoologyReference<SchoologyEvent>
 	
 	SchoologyLinks links;
 	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getTitle()
+	{
+	  return title;
+	}
+
+	public String getDescription()
+	{
+	  return description;
+	}
+
+	public Date getStart()
+	{
+	  return start;
+	}
+
+	public boolean getHasEnd()
+	{
+	  return hasEnd;
+	}
+
+	public Date getEnd()
+	{
+	  return end;
+	}
+
+	public boolean getAllDay()
+	{
+	  return allDay;
+	}
+
+	public boolean getEditable()
+	{
+	  return editable;
+	}
+
+	public SchoologyRSVPType getRsvp()
+	{
+	  return rsvp;
+	}
+
+	public boolean getCommentsEnabled()
+	{
+	  return commentsEnabled;
+	}
+
+	public SchoologyEventType getType()
+	{
+	  return type;
+	}
+
+	public SchoologyRealm getRealm()
+	{
+	  return realm;
+	}
+
+	    //Depends on realm
+	public String getSchoolID()
+	{
+	  return schoolID;
+	}
+
+	public String getGroupID()
+	{
+	  return groupID;
+	}
+
+	public String getSectionID()
+	{
+	  return sectionID;
+	}
+
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
 }

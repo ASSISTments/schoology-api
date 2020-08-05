@@ -1,7 +1,5 @@
 package net.rvanasa.schoology.impl;
 
-import lombok.Getter;
-
 public class SchoologyResourceLocator
 {
 	public String getRequestURLBase()

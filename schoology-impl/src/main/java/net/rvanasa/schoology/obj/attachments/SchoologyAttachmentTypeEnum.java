@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.attachments;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/updates#Fields
  * attachment/type
@@ -20,12 +18,16 @@ public enum SchoologyAttachmentTypeEnum
 	@SerializedName(value="embed")
 	EMBED("embed");
 	
-	@Getter
 	private final String apiVaule;
 	
 	private SchoologyAttachmentTypeEnum(String apiValue)
 	{
 		this.apiVaule = apiValue;
+	}
+	
+	public String getApiVaule()
+	{
+	  return apiVaule;
 	}
 	
 	public static SchoologyAttachmentTypeEnum getAttachmentType(String apiValue)

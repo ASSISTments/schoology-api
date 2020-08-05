@@ -2,8 +2,6 @@ package net.rvanasa.schoology.submissions;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /**
  * Java representation of the Schoology API's Submission Comment JSON. For more
  * information see:
@@ -12,7 +10,6 @@ import lombok.Getter;
  * @author jkstpierre
  *
  */
-@Getter
 public class SchoologySubmissionComment {
   @SerializedName(value = "id")
   String ID;
@@ -20,4 +17,25 @@ public class SchoologySubmissionComment {
   String userID;
   String comment;
   String created;
+  
+  public String getID()
+  {
+    return ID;
+  }
+
+  public String getUserID()
+  {
+    return userID;
+  }
+
+  public String getComment()
+  {
+    return comment;
+  }
+
+  public String getCreated()
+  {
+    return created;
+  }
+
 }

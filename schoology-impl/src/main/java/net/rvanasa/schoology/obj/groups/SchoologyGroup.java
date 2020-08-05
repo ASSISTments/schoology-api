@@ -1,15 +1,12 @@
 package net.rvanasa.schoology.obj.groups;
 
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/group
  */
-@Getter
 public class SchoologyGroup extends SchoologyReference<SchoologyGroup>
 {
 	
@@ -35,9 +32,74 @@ public class SchoologyGroup extends SchoologyReference<SchoologyGroup>
 	
 	SchoologyLinks links;
 	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getTitle()
+	{
+	  return title;
+	}
+
+	public String getDescription()
+	{
+	  return description;
+	}
+
+	public String getWebsite()
+	{
+	  return website;
+	}
+
+	public String getAccessCode()
+	{
+	  return accessCode;
+	}
+
+	public String getCategory()
+	{
+	  return category;
+	}
+
+	public SchoologyGroupOptions getOptions()
+	{
+	  return options;
+	}
+
+	public String getGroupCode()
+	{
+	  return groupCode;
+	}
+
+	public String getPrivacyLevel()
+	{
+	  return privacyLevel;
+	}
+
+	public String getPictureURL()
+	{
+	  return pictureURL;
+	}
+
+	public String getSchoolID()
+	{
+	  return schoolID;
+	}
+
+	public String getBuildingID()
+	{
+	  return buildingID;
+	}
+
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
+	
 }
 
-@Getter
 class SchoologyGroupOptions
 {
 	
@@ -51,5 +113,31 @@ class SchoologyGroupOptions
 	boolean createDiscussion;
 	@SerializedName(value="create_files")
 	boolean createFiles;
+	
+	public boolean getInviteType()
+	{
+	  return inviteType;
+	}
+
+	public boolean getMemberPost()
+	{
+	  return memberPost;
+	}
+
+	public boolean getMemberPostComment()
+	{
+	  return memberPostComment;
+	}
+
+	public boolean getCreateDiscussion()
+	{
+	  return createDiscussion;
+	}
+
+	public boolean getCreateFiles()
+	{
+	  return createFiles;
+	}
+
 	
 }

@@ -2,12 +2,9 @@ package net.rvanasa.schoology.obj.attachments.attachment;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api/retrieving-attachments#Embed_Object
  */
-@Getter
 public class SchoologyEmbed
 {
 	@SerializedName(value="id")
@@ -15,4 +12,14 @@ public class SchoologyEmbed
 	@SerializedName(value="embed_code")
 	String embedCode;
 	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getEmbedCode()
+	{
+	  return embedCode;
+	}
+
 }

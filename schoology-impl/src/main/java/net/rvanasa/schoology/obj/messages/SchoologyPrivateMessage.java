@@ -1,17 +1,13 @@
 package net.rvanasa.schoology.obj.messages;
 
 import java.util.Date;
-
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/private-messaging
  */
-@Getter
 public class SchoologyPrivateMessage extends SchoologyReference<SchoologyPrivateMessage>
 {
 	
@@ -32,4 +28,49 @@ public class SchoologyPrivateMessage extends SchoologyReference<SchoologyPrivate
 	
 	SchoologyLinks links;
 	
+	public String getID()
+	{
+	  return ID;
+	}
+
+	public String getSubject()
+	{
+	  return subject;
+	}
+
+	public String getRecipientIDs()
+	{
+	  return recipientIDs;
+	}
+
+	public Date getLastUpdated()
+	{
+	  return lastUpdated;
+	}
+
+	public String getMid()
+	{
+	  return mid;
+	}
+
+	public String getAuthorID()
+	{
+	  return authorID;
+	}
+
+	public SchoologyMessageStatus getMessageStatus()
+	{
+	  return messageStatus;
+	}
+
+	public String getMessage()
+	{
+	  return message;
+	}
+
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+
 }

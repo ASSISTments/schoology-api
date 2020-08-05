@@ -1,12 +1,9 @@
 package net.rvanasa.schoology.obj;
 
-import lombok.Getter;
-
 /*
  * Link provided to self
  * Useful for making additional requests to the given endpoint
  */
-@Getter
 public class SchoologyLinks
 {
 	
@@ -15,5 +12,19 @@ public class SchoologyLinks
 	String next;
 	//Optional URL if previous is available
 	String previous;
+	
+	public String getSelf()
+	{
+	  return self;
+	}
+	public String getNext()
+	{
+	  return next;
+	}
+	public String getPrevious()
+	{
+	  return previous;
+	}
+	    
 	
 }

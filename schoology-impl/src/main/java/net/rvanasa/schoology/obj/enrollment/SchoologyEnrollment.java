@@ -1,17 +1,12 @@
 package net.rvanasa.schoology.obj.enrollment;
 
 import com.google.gson.annotations.SerializedName;
-
-import lombok.Getter;
-import lombok.Setter;
 import net.rvanasa.schoology.obj.SchoologyLinks;
 import net.rvanasa.schoology.obj.SchoologyReference;
 
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/enrollment
  */
-@Getter
-@Setter
 public class SchoologyEnrollment extends SchoologyReference<SchoologyEnrollment> {
   @SerializedName(value = "id")
   String ID;
@@ -46,5 +41,159 @@ public class SchoologyEnrollment extends SchoologyReference<SchoologyEnrollment>
   int enrollmentSource;
 
   SchoologyLinks links;
+  
+  public String getID()
+  {
+    return ID;
+  }
+  public void setID(String ID)
+  {
+    this.ID = ID;
+  }
+
+  public String getUserID()
+  {
+    return userID;
+  }
+  public void setUserID(String userID)
+  {
+    this.userID = userID;
+  }
+
+  public String getSchoolUID()
+  {
+    return schoolUID;
+  }
+  public void setSchoolUID(String schoolUID)
+  {
+    this.schoolUID = schoolUID;
+  }
+
+  public String getNameTitle()
+  {
+    return nameTitle;
+  }
+  public void setNameTitle(String nameTitle)
+  {
+    this.nameTitle = nameTitle;
+  }
+
+  public boolean getNameTitleShow()
+  {
+    return nameTitleShow;
+  }
+  public void setNameTitleShow(boolean nameTitleShow)
+  {
+    this.nameTitleShow = nameTitleShow;
+  }
+
+  public String getNameFirst()
+  {
+    return nameFirst;
+  }
+  public void setNameFirst(String nameFirst)
+  {
+    this.nameFirst = nameFirst;
+  }
+
+  public String getNameFirstPreferred()
+  {
+    return nameFirstPreferred;
+  }
+  public void setNameFirstPreferred(String nameFirstPreferred)
+  {
+    this.nameFirstPreferred = nameFirstPreferred;
+  }
+
+  public boolean getUsePreferredFirstName()
+  {
+    return usePreferredFirstName;
+  }
+  public void setUsePreferredFirstName(boolean usePreferredFirstName)
+  {
+    this.usePreferredFirstName = usePreferredFirstName;
+  }
+
+  public String getNameMiddle()
+  {
+    return nameMiddle;
+  }
+  public void setNameMiddle(String nameMiddle)
+  {
+    this.nameMiddle = nameMiddle;
+  }
+
+  public boolean getNameMiddleShow()
+  {
+    return nameMiddleShow;
+  }
+  public void setNameMiddleShow(boolean nameMiddleShow)
+  {
+    this.nameMiddleShow = nameMiddleShow;
+  }
+
+  public String getNameLast()
+  {
+    return nameLast;
+  }
+  public void setNameLast(String nameLast)
+  {
+    this.nameLast = nameLast;
+  }
+
+  public String getNameDisplay()
+  {
+    return nameDisplay;
+  }
+  public void setNameDisplay(String nameDisplay)
+  {
+    this.nameDisplay = nameDisplay;
+  }
+
+  public boolean getAdmin()
+  {
+    return admin;
+  }
+  public void setAdmin(boolean admin)
+  {
+    this.admin = admin;
+  }
+
+  public SchoologyEnrollmentStatus getStatus()
+  {
+    return status;
+  }
+  public void setStatus(SchoologyEnrollmentStatus status)
+  {
+    this.status = status;
+  }
+
+  public String getPictureURL()
+  {
+    return pictureURL;
+  }
+  public void setPictureURL(String pictureURL)
+  {
+    this.pictureURL = pictureURL;
+  }
+
+  public int getEnrollmentSource()
+  {
+    return enrollmentSource;
+  }
+  public void setEnrollmentSource(int enrollmentSource)
+  {
+    this.enrollmentSource = enrollmentSource;
+  }
+
+  public SchoologyLinks getLinks()
+  {
+    return links;
+  }
+  public void setLinks(SchoologyLinks links)
+  {
+    this.links = links;
+  }
+
 
 }

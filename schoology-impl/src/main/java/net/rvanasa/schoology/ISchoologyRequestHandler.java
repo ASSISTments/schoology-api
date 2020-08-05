@@ -15,7 +15,6 @@ import net.rvanasa.schoology.obj.enrollment.SchoologyEnrollmentsPage;
 import net.rvanasa.schoology.obj.events.SchoologyEventsPage;
 import net.rvanasa.schoology.obj.groups.SchoologyGroup;
 import net.rvanasa.schoology.obj.groups.SchoologyGroupsPage;
-import net.rvanasa.schoology.obj.messages.SchoologyMessageStatus;
 import net.rvanasa.schoology.obj.messages.SchoologyPrivateMessage;
 import net.rvanasa.schoology.obj.messages.SchoologyPrivateMessagesPage;
 import net.rvanasa.schoology.obj.schools.SchoologySchool;

@@ -1,15 +1,12 @@
 package net.rvanasa.schoology.obj;
 
 import java.lang.reflect.ParameterizedType;
-
-import lombok.Getter;
 import net.rvanasa.schoology.impl.SchoologyResponse;
 
 /*
  * Represents a page of data with the size of entries and link to self, next, and previous page.
  * Additional requests are required by schoology page objects, so this class extends SchoologyReference
  */
-@Getter
 public abstract class SchoologyPage<T> extends SchoologyReference<T>
 {
 	
@@ -23,6 +20,19 @@ public abstract class SchoologyPage<T> extends SchoologyReference<T>
 	public SchoologyPage()
 	{
 		this.pageType = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
+	}
+	
+	public int getTotal()
+	{
+	  return total;
+	}
+	public SchoologyLinks getLinks()
+	{
+	  return links;
+	}
+	public Class<T> getPageType()
+	{
+	  return pageType;
 	}
 	
 	/**

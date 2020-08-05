@@ -2,8 +2,6 @@ package net.rvanasa.schoology.obj.courses;
 
 import com.google.gson.annotations.SerializedName;
 
-import lombok.Getter;
-
 /*
  * https://developers.schoology.com/api-documentation/rest-api-v1/course#Subject-Area
  */
@@ -31,15 +29,22 @@ public enum SchoologyCourseSubjectAreaEnum
 	@SerializedName(value="9")
 	ARTS(9, "Arts");
 	
-	@Getter
 	private final int apiValue;
-	@Getter
 	private final String subjectArea;
 	
 	private SchoologyCourseSubjectAreaEnum(int apiValue, String subjectArea)
 	{
 		this.apiValue = apiValue;
 		this.subjectArea = subjectArea;
+	}
+	
+	public int getApiValue()
+	{
+	  return apiValue;
+	}
+	public String getSubjectArea()
+	{
+	  return subjectArea;
 	}
 	
 	public static SchoologyCourseSubjectAreaEnum getCourseSubjectArea(int apiValue)
