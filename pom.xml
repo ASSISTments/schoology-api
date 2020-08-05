@@ -7,6 +7,12 @@
 	<version>1.0</version>
 	<name>Anasa Schoology</name>
 	<packaging>pom</packaging>
+  
+  <parent>
+    <groupId>org.assistments</groupId>
+    <artifactId>repoManagementParentPom</artifactId>
+    <version>1.0</version>
+  </parent>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
