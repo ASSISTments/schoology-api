@@ -26,6 +26,7 @@ Desktop.ini
 
 *.class
 .project
-*/.settings
+*/.settings/
 */.project
 */.classpath
+.settings
